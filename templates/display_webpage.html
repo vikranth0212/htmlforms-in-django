@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>display_webpage</h1>
+        <table border="5px">
+            <tr>
+                <th>PK/ID</th>
+                <th>Name</th>
+                <th>Url</th>
+                <th>Email</th>
+                <th>Topic_Name</th>
+            </tr>
+            {% for j in webp %}
+              <tr>
+                <td>{{j.pk}}</td>
+                <td>{{j.name}}</td>
+                <td>{{j.url}}</td>
+                <td>{{j.email}}</td>
+                <td>{{j.topic_name}}</td>
+              </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>

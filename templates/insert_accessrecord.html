@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>insert_accessrecord</h1>
+        <form  method="POST">
+            {% csrf_token %}
+            <label for="tn2">name</label>
+            <select name="tn1" id="tn2">
+            {% for t1 in wepx %}
+                <option value="{{t1.name}}">{{t1.name}}</option>
+            {% endfor %} 
+            </select>
+            <br><br>
+
+            <label for="tn4">author</label>
+            <input type="text" name="tn2" id="tn4">
+            <br><br>
+
+            <label for="tn5">date</label>
+            <input type="date" name="tn3" id="tn5">
+            <br><br>
+
+            <input type="submit" value="insert accessrecord">
+        </form>    
+            
+    </center>
+</body>
+</html>

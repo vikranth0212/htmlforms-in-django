@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <form method="POST">
+            {% csrf_token %}
+            <label for="t5">Topic_Name</label>
+
+            <select name="t8" id="t5" multiple>
+                {% for to in topi %}
+                  <option value="{{to.topic_name}}">{{to.topic_name}}</option>
+                {% endfor %}  
+
+
+
+
+            </select>
+            <br>
+           
+            <input type="submit" value="multiwebpage select">
+
+
+        </form>
+
+
+    </center>
+</body>
+</html>
